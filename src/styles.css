@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
   }
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0px !important;
+}
 button{
     background-color: #473BF0;
     color: #FFFFFF;
@@ -20,4 +24,10 @@ button:hover{
 
 .color-secondary{
     color: rgba(255, 255, 255, 0.5);
+}
+
+.column-md{
+    @media (max-width:767px) {
+        flex-direction: column;
+    }
 }
