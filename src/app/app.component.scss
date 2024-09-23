@@ -1,0 +1,46 @@
+.header-bg {
+    background-image: url('../assets/main-bg.png');
+
+    @media (max-width:767px) {
+        .shift-business{
+            width: 100% !important;
+        }
+        .shade-pro{
+            flex-direction: column;
+            .fem-img{
+                width: 300px !important;
+                margin-top: 40px;
+                img{
+                    width: 100%;
+                }
+            }
+            
+        }
+
+        
+    }
+
+    header{
+        margin-bottom: 70px;
+    }
+    
+    .shift-business{
+        width: 420px;
+    }
+
+    .shade-pro{
+        flex-wrap: wrap;
+    }
+    
+    menu{
+        column-gap: 40px;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    
+    li{
+        list-style: none;
+    }
+}
+
+
