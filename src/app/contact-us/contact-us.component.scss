@@ -1,0 +1,27 @@
+.contact-us{
+    padding: 150px 50px;
+    .fields{
+        width: 40%;
+        input{
+            padding: 8px 16px;
+            outline: none;
+            border: 1px solid rgb(41, 32, 32);
+            border-radius: 8px;
+        }
+    }
+    .main-form{
+        border: 1px solid rgba(39, 27, 27, 0.989);
+        border-radius: 8px;
+        padding: 40px;
+        width: 60%;
+    }
+}
+
+.contact-list{
+    border: 1px solid rgba(39, 27, 27, 0.989);
+    border-radius: 4px;
+    padding: 6px 12px;
+    h5,p{
+        width: 20%;
+    }
+}

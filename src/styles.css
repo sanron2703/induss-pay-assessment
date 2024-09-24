@@ -8,6 +8,17 @@
 h1,h2,h3,h4,h5,h6,p{
     margin: 0px !important;
 }
+
+input[type="number"]{
+    appearance: none;
+    -moz-appearance:unset
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 button{
     background-color: #473BF0;
     color: #FFFFFF;
@@ -20,6 +31,10 @@ button{
 
 button:hover{
     background-color: #191194;
+}
+
+button:disabled{
+    cursor: not-allowed;
 }
 
 .color-secondary{
