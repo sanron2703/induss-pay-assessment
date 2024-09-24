@@ -1,5 +1,14 @@
 .contact-us{
     padding: 150px 50px;
+    @media (max-width:767px) {
+        padding: 200px 20px;
+        .main-form{
+            width: 100% !important;
+        }
+        .fields{
+            width: 100% !important;
+        }
+    }
     .fields{
         width: 40%;
         input{
@@ -20,8 +29,24 @@
 .contact-list{
     border: 1px solid rgba(39, 27, 27, 0.989);
     border-radius: 4px;
-    padding: 6px 12px;
-    h5,p{
+    padding: 8px 12px;
+    display: flex;
+    h5, .items{
         width: 20%;
+    }
+    .items{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    @media (max-width:767px) {
+        flex-wrap: wrap;
+        gap: 15px !important;
+        .items{
+            width: 46% !important;
+            .label{
+                font-weight: 600;
+            }
+        }
     }
 }

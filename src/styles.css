@@ -46,3 +46,26 @@ button:disabled{
         flex-direction: column;
     }
 }
+
+.d-none-md{
+    @media (max-width:767px) {
+        display: none !important;
+    }
+    display: flex;
+}
+
+.flex{
+    display: flex;
+}
+
+.d-flex-md{
+    @media (max-width:767px) {
+        display: flex !important;
+    }
+    display: none;
+}
+.w-md-full{
+    @media (max-width:767px) {
+        width: 100% !important;
+    }
+}

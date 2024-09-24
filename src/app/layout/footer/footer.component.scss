@@ -5,6 +5,7 @@ footer{
 
     .footer-list{
         gap: 80px;
+        // flex-wrap: wrap;
     }
 
     @media (max-width:767px) {
@@ -17,7 +18,7 @@ footer{
 .list-content{
     width: 100%;
     .list{
-        width: 200px;
+        width: 190px;
     }
     @media (max-width:767px) {
         flex-direction: column;
@@ -56,5 +57,11 @@ li:hover{
 }
 img{
     cursor: pointer;
+}
+.brain{
+    width: 260px;
+    @media (max-width:767px) {
+        width: 100% !important;
+    }
 }
 

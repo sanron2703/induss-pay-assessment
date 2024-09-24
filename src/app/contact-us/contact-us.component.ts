@@ -23,6 +23,7 @@ export class ContactUsComponent implements OnInit{
   })
 
   contactList: any[] = []
+  isEditDetails: boolean = false
   constructor(private contactservice: ContactUsService){
 
   }
@@ -34,21 +35,28 @@ export class ContactUsComponent implements OnInit{
     let data ={
       ...this.contactForm.value
     }
+    this.isEditDetails ?
     this.contactservice.createContacts(data).subscribe((res)=>{
      this.contactForm.reset()
+     this.getContactsList()
+    }) : 
+    this.contactservice.updateContactDetails(data).subscribe((res)=>{
+      this.contactForm.reset()
+      this.getContactsList()
     })
   }
 
   getContactsList(){
     this.contactservice.getContactList().subscribe((res)=>{
+      this.isEditDetails = false
       this.contactList = res
-      console.log(res)
     })
   }
 
   editContact(contact:any){
-    console.log(contact);
     if(contact){
+      this.isEditDetails = true
+      document.getElementById('form')?.scrollIntoView()
       this.contactForm.controls['first_name'].patchValue(contact.first_name)
       this.contactForm.controls['last_name'].patchValue(contact.first_name)
       this.contactForm.controls['age'].patchValue(contact.age)
@@ -58,7 +66,6 @@ export class ContactUsComponent implements OnInit{
       this.contactForm.controls['adhaar_no'].patchValue(contact.adhaar_no)
       this.contactForm.controls['pan_no'].patchValue(contact.pan_no)
     }
-    
   }
 
   deleteContact(contactId:string){

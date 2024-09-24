@@ -18,7 +18,7 @@ export class ContactUsService {
     return this.http.get(this.baseApi)
   }
 
-  editContactDetails(data:any): Observable<any>{
+  updateContactDetails(data:any): Observable<any>{
     return this.http.put(this.baseApi,data)
   }
 

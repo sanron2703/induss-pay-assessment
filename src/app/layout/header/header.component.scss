@@ -1,3 +1,15 @@
+@media (max-width:767px) {
+    header{
+        flex-direction: column;
+        gap: 20px;
+        h3,h6{
+            font-size: 17px;
+        }
+    }
+    menu{
+        gap: 20px;
+    }
+}
 menu{
     column-gap: 40px;
     font-weight: 700;
